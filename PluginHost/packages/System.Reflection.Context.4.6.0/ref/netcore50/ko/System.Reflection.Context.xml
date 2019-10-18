@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Reflection.Context</name>
+  </assembly>
+  <members>
+    <member name="T:System.Reflection.Context.CustomReflectionContext">
+      <summary>사용자 지정 가능한 리플렉션 컨텍스트를 나타냅니다.</summary>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.#ctor">
+      <summary>
+        <see cref="T:System.Reflection.Context.CustomReflectionContext" /> 클래스의 새 인스턴스를 초기화합니다.</summary>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.#ctor(System.Reflection.ReflectionContext)">
+      <summary>지정된 리플렉션 컨텍스트를 기반으로 사용하여 <see cref="T:System.Reflection.Context.CustomReflectionContext" /> 클래스의 새 인스턴스를 초기화합니다.</summary>
+      <param name="source">기본으로 사용할 리플렉션 컨텍스트입니다.</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.AddProperties(System.Type)">
+      <summary>파생된 클래스에서 재정의된 경우 이 리플렉션 컨텍스트에 제공된 바와 같이 지정된 형식에 대한 추가 속성 컬렉션을 제공합니다.</summary>
+      <returns>지정된 형식에 대한 추가 속성 컬렉션입니다.</returns>
+      <param name="type">속성을 추가할 형식입니다.</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.CreateProperty(System.Type,System.String,System.Func{System.Object,System.Object},System.Action{System.Object,System.Object})">
+      <summary>
+        <see cref="M:System.Reflection.Context.CustomReflectionContext.AddProperties(System.Type)" /> 메서드와 함께 사용할 형식에 추가될 속성을 나타내는 개체를 만듭니다.</summary>
+      <returns>속성을 나타내는 개체입니다.</returns>
+      <param name="propertyType">만들 속성의 형식입니다.</param>
+      <param name="name">만들 속성의 이름입니다.</param>
+      <param name="getter">속성의 get 접근자를 나타내는 개체입니다.</param>
+      <param name="setter">속성의 set 접근자를 나타내는 개체입니다.</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.CreateProperty(System.Type,System.String,System.Func{System.Object,System.Object},System.Action{System.Object,System.Object},System.Collections.Generic.IEnumerable{System.Attribute},System.Collections.Generic.IEnumerable{System.Attribute},System.Collections.Generic.IEnumerable{System.Attribute})">
+      <summary>지정된 사용자 지정 특성을 사용하여 <see cref="M:System.Reflection.Context.CustomReflectionContext.AddProperties(System.Type)" /> 메서드와 함께 사용할 형식에 추가될 속성을 나타내는 개체를 만듭니다.</summary>
+      <returns>속성을 나타내는 개체입니다.</returns>
+      <param name="propertyType">만들 속성의 형식입니다.</param>
+      <param name="name">만들 속성의 이름입니다.</param>
+      <param name="getter">속성의 get 접근자를 나타내는 개체입니다.</param>
+      <param name="setter">속성의 set 접근자를 나타내는 개체입니다.</param>
+      <param name="propertyCustomAttributes">속성에 적용할 사용자 지정 특성의 컬렉션입니다.</param>
+      <param name="getterCustomAttributes">속성의 get 접근자에 적용할 사용자 지정 특성의 컬렉션입니다.</param>
+      <param name="setterCustomAttributes">속성의 set 접근자에 적용할 사용자 지정 특성의 컬렉션입니다.</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.GetCustomAttributes(System.Reflection.MemberInfo,System.Collections.Generic.IEnumerable{System.Object})">
+      <summary>파생된 클래스에서 재정의된 경우 이 리플렉션 컨텍스트에 제공된 바와 같이 지정된 멤버에 대한 사용자 지정 특성 목록을 제공합니다.</summary>
+      <returns>이 리플렉션 컨텍스트에서 지정된 멤버의 사용자 지정 특성을 나타내는 컬렉션입니다.</returns>
+      <param name="member">사용자 지정 특성이 반환되는 멤버입니다.</param>
+      <param name="declaredAttributes">현재 컨텍스트에 있는 멤버 특성의 컬렉션입니다.</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.GetCustomAttributes(System.Reflection.ParameterInfo,System.Collections.Generic.IEnumerable{System.Object})">
+      <summary>파생된 클래스에서 재정의된 경우 이 리플렉션 컨텍스트에 제공된 바와 같이 지정된 매개 변수에 대한 사용자 지정 특성 목록을 제공합니다.</summary>
+      <returns>이 리플렉션 컨텍스트에서 지정된 매개 변수의 사용자 지정 특성을 나타내는 컬렉션입니다.</returns>
+      <param name="parameter">사용자 지정 특성이 반환되는 매개 변수입니다.</param>
+      <param name="declaredAttributes">현재 컨텍스트에 있는 매개 변수 특성의 컬렉션입니다.</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.MapAssembly(System.Reflection.Assembly)"></member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.MapType(System.Reflection.TypeInfo)"></member>
+  </members>
+</doc>

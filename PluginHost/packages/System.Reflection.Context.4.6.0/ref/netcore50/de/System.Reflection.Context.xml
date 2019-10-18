@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Reflection.Context</name>
+  </assembly>
+  <members>
+    <member name="T:System.Reflection.Context.CustomReflectionContext">
+      <summary>Stellt einen benutzerdefinierten Reflektionskontext dar.</summary>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.#ctor">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.Reflection.Context.CustomReflectionContext" />-Klasse.</summary>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.#ctor(System.Reflection.ReflectionContext)">
+      <summary>Initialisiert eine neue Instanz der <see cref="T:System.Reflection.Context.CustomReflectionContext" />-Klasse mit der angegebenen Codebasis und Reflektionskontext als Grundlage.</summary>
+      <param name="source">Der als Basisklasse verwendete Reflektionskontext.</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.AddProperties(System.Type)">
+      <summary>Stellt beim Überschreiben in einer abgeleiteten Klasse eine Auflistung für zusätzliche Eigenschaften für den angegebenen Typ bereit, wie in diesem Reflektionskontext dargestellt.</summary>
+      <returns>Eine Sammlung von zusätzlichen Eigenschaften für den angegebenen Typ.</returns>
+      <param name="type">Der Typ dem Eigenschaften hinzugefügt werden sollen.</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.CreateProperty(System.Type,System.String,System.Func{System.Object,System.Object},System.Action{System.Object,System.Object})">
+      <summary>Erstellt ein Objekt, das eine Eigenschaft darstellt, die einem Typ hinzugefügt werden soll, der von der <see cref="M:System.Reflection.Context.CustomReflectionContext.AddProperties(System.Type)" />-Methode verwendet werden soll.</summary>
+      <returns>Ein Objekt, das die Eigenschaft darstellt.</returns>
+      <param name="propertyType">Der Typ der zu erstellenden Eigenschaft.</param>
+      <param name="name">Der Name der zu erstellenden Eigenschaft.</param>
+      <param name="getter">Ein Objekt, das den get-Accessor der Eigenschaft darstellt.</param>
+      <param name="setter">Ein Objekt, das den set-Accessor der Eigenschaft darstellt.</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.CreateProperty(System.Type,System.String,System.Func{System.Object,System.Object},System.Action{System.Object,System.Object},System.Collections.Generic.IEnumerable{System.Attribute},System.Collections.Generic.IEnumerable{System.Attribute},System.Collections.Generic.IEnumerable{System.Attribute})">
+      <summary>Erstellt ein Objekt, das eine Eigenschaft darstellt, die einem Typ hinzugefügt werden soll, der von der <see cref="M:System.Reflection.Context.CustomReflectionContext.AddProperties(System.Type)" />-Methode verwendet werden soll und die angegebenen benutzerdefinierten Attribute verwendet.</summary>
+      <returns>Ein Objekt, das die Eigenschaft darstellt.</returns>
+      <param name="propertyType">Der Typ der zu erstellenden Eigenschaft.</param>
+      <param name="name">Der Name der zu erstellenden Eigenschaft.</param>
+      <param name="getter">Ein Objekt, das den get-Accessor der Eigenschaft darstellt.</param>
+      <param name="setter">Ein Objekt, das den set-Accessor der Eigenschaft darstellt.</param>
+      <param name="propertyCustomAttributes">Eine Sammlung benutzerdefinierter Attribute auf die Eigenschaft angewendet werden sollen.</param>
+      <param name="getterCustomAttributes">Eine Sammlung benutzerdefinierter Attribute, die auf den get-Accessor der Eigenschaft angewendet werden sollen.</param>
+      <param name="setterCustomAttributes">Eine Sammlung benutzerdefinierter Attribute, die auf den set-Accessor der Eigenschaft angewendet werden sollen.</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.GetCustomAttributes(System.Reflection.MemberInfo,System.Collections.Generic.IEnumerable{System.Object})">
+      <summary>Stellt beim Überschreiben in einer abgeleiteten Klasse eine Liste benutzerdefinierter Attribute für den angegebenen Member bereit, wie in diesem Reflektionskontext dargestellt.</summary>
+      <returns>Eine Sammlung, die die benutzerdefinierten Attribute des angegebenen Members in diesem Reflektionskontext darstellt.</returns>
+      <param name="member">Der Member, deren benutzerdefinierte Attribute zurückgegeben werden.</param>
+      <param name="declaredAttributes">Eine Sammlung der Attribute des Members im aktuellen Kontext.</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.GetCustomAttributes(System.Reflection.ParameterInfo,System.Collections.Generic.IEnumerable{System.Object})">
+      <summary>Stellt beim Überschreiben in einer abgeleiteten Klasse eine Liste benutzerdefinierter Attribute für den angegebenen Parameter bereit, wie in diesem Reflektionskontext dargestellt.</summary>
+      <returns>Eine Sammlung, die die benutzerdefinierten Attribute des angegebenen Parameters in diesem Reflektionskontext darstellt.</returns>
+      <param name="parameter">Der Parameter, dessen benutzerdefinierte Attribute zurückgegeben werden.</param>
+      <param name="declaredAttributes">Eine Sammlung der Attribute des Parameters im aktuellen Kontext.</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.MapAssembly(System.Reflection.Assembly)"></member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.MapType(System.Reflection.TypeInfo)"></member>
+  </members>
+</doc>

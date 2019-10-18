@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Reflection.Context</name>
+  </assembly>
+  <members>
+    <member name="T:System.Reflection.Context.CustomReflectionContext">
+      <summary>Representa un contexto de reflexión personalizable.</summary>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.#ctor">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:System.Reflection.Context.CustomReflectionContext" />.</summary>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.#ctor(System.Reflection.ReflectionContext)">
+      <summary>Inicializa una nueva instancia de la clase <see cref="T:System.Reflection.Context.CustomReflectionContext" /> con el contexto de reflexión especificado como base.</summary>
+      <param name="source">El contexto de la reflexión que se va a usar como base.</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.AddProperties(System.Type)">
+      <summary>Cuando se reemplaza en una clase derivada, proporciona una colección de propiedades adicionales para el tipo especificado, como se representa en este contexto de reflexión.</summary>
+      <returns>Colección de propiedades adicionales del tipo especificado.</returns>
+      <param name="type">Tipo al que agregar propiedades.</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.CreateProperty(System.Type,System.String,System.Func{System.Object,System.Object},System.Action{System.Object,System.Object})">
+      <summary>Crea un objeto que representa una propiedad que se va a agregar a un tipo y que se va a utilizar con el método <see cref="M:System.Reflection.Context.CustomReflectionContext.AddProperties(System.Type)" />.</summary>
+      <returns>Objeto que representa la propiedad.</returns>
+      <param name="propertyType">Tipo de la propiedad que se va a crear.</param>
+      <param name="name">Nombre de la propiedad que se va a crear.</param>
+      <param name="getter">Objeto que representa el descriptor de acceso get de la propiedad.</param>
+      <param name="setter">Objeto que representa el descriptor de acceso set de la propiedad.</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.CreateProperty(System.Type,System.String,System.Func{System.Object,System.Object},System.Action{System.Object,System.Object},System.Collections.Generic.IEnumerable{System.Attribute},System.Collections.Generic.IEnumerable{System.Attribute},System.Collections.Generic.IEnumerable{System.Attribute})">
+      <summary>Crea un objeto que representa una propiedad que se va a agregar a un tipo y que se va a utilizar con el método <see cref="M:System.Reflection.Context.CustomReflectionContext.AddProperties(System.Type)" /> usando los atributos personalizados especificados.</summary>
+      <returns>Objeto que representa la propiedad.</returns>
+      <param name="propertyType">Tipo de la propiedad que se va a crear.</param>
+      <param name="name">Nombre de la propiedad que se va a crear.</param>
+      <param name="getter">Objeto que representa el descriptor de acceso get de la propiedad.</param>
+      <param name="setter">Objeto que representa el descriptor de acceso set de la propiedad.</param>
+      <param name="propertyCustomAttributes">Colección de atributos personalizados para aplicar a la propiedad.</param>
+      <param name="getterCustomAttributes">Colección de atributos personalizados para aplicar el descriptor de acceso get de la propiedad.</param>
+      <param name="setterCustomAttributes">Colección de atributos personalizados para aplicar el descriptor de acceso set de la propiedad.</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.GetCustomAttributes(System.Reflection.MemberInfo,System.Collections.Generic.IEnumerable{System.Object})">
+      <summary>Cuando se reemplaza en una clase derivada, proporciona una lista de atributos personalizados para el miembro especificado, como se representa en este contexto de reflexión.</summary>
+      <returns>Colección que representa los atributos personalizados del miembro especificado en este contexto de reflexión.</returns>
+      <param name="member">Miembro cuyos atributos personalizados se devolverán.</param>
+      <param name="declaredAttributes">Colección de atributos del miembro en el contexto actual.</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.GetCustomAttributes(System.Reflection.ParameterInfo,System.Collections.Generic.IEnumerable{System.Object})">
+      <summary>Cuando se reemplaza en una clase derivada, proporciona una lista de atributos personalizados para el parámetro especificado, como se representa en este contexto de reflexión.</summary>
+      <returns>Colección que representa los atributos personalizados del parámetro especificado en este contexto de reflexión.</returns>
+      <param name="parameter">Parámetro cuyos atributos personalizados se devolverán.</param>
+      <param name="declaredAttributes">Colección de atributos del parámetro en el contexto actual.</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.MapAssembly(System.Reflection.Assembly)"></member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.MapType(System.Reflection.TypeInfo)"></member>
+  </members>
+</doc>

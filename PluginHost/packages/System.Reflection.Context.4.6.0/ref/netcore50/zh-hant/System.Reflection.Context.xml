@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Reflection.Context</name>
+  </assembly>
+  <members>
+    <member name="T:System.Reflection.Context.CustomReflectionContext">
+      <summary>表示可自訂的反映內容。</summary>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.#ctor">
+      <summary>初始化 <see cref="T:System.Reflection.Context.CustomReflectionContext" /> 類別的新執行個體。</summary>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.#ctor(System.Reflection.ReflectionContext)">
+      <summary>使用指定的反映內容為基底，初始化 <see cref="T:System.Reflection.Context.CustomReflectionContext" /> 類別的新執行個體。</summary>
+      <param name="source">要做為基礎的反映內容。</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.AddProperties(System.Type)">
+      <summary>在衍生類別中覆寫時，為指定的類型提供額外屬性集合，如這個反映內容所表示。</summary>
+      <returns>所指定類型的其他屬性集合。</returns>
+      <param name="type">要在其中加入屬性的類型。</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.CreateProperty(System.Type,System.String,System.Func{System.Object,System.Object},System.Action{System.Object,System.Object})">
+      <summary>建立表示要加入類型之屬性的物件，該類型會搭配 <see cref="M:System.Reflection.Context.CustomReflectionContext.AddProperties(System.Type)" /> 方法。</summary>
+      <returns>表示屬性的物件。</returns>
+      <param name="propertyType">要建立的屬性類型。</param>
+      <param name="name">要建立的屬性名稱。</param>
+      <param name="getter">代表示屬性的 get 存取子之物件。</param>
+      <param name="setter">代表示屬性的 set 存取子之物件。</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.CreateProperty(System.Type,System.String,System.Func{System.Object,System.Object},System.Action{System.Object,System.Object},System.Collections.Generic.IEnumerable{System.Attribute},System.Collections.Generic.IEnumerable{System.Attribute},System.Collections.Generic.IEnumerable{System.Attribute})">
+      <summary>建立表示要加入類型之屬性 (Property) 的物件，該類型會搭配 <see cref="M:System.Reflection.Context.CustomReflectionContext.AddProperties(System.Type)" /> 方法使用且使用指定的自訂屬性 (Attribute)。</summary>
+      <returns>表示屬性的物件。</returns>
+      <param name="propertyType">要建立的屬性類型。</param>
+      <param name="name">要建立的屬性名稱。</param>
+      <param name="getter">代表示屬性的 get 存取子之物件。</param>
+      <param name="setter">代表示屬性的 set 存取子之物件。</param>
+      <param name="propertyCustomAttributes">要套用至屬性 (Property) 之自訂屬性 (Attribute) 的集合。</param>
+      <param name="getterCustomAttributes">要套用至屬性 (Property) 的 get 存取子之自訂屬性 (Attribute) 的集合。</param>
+      <param name="setterCustomAttributes">要套用至屬性 (Property) 的 set 存取子之自訂屬性 (Attribute) 的集合。</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.GetCustomAttributes(System.Reflection.MemberInfo,System.Collections.Generic.IEnumerable{System.Object})">
+      <summary>在衍生類別中覆寫時，為指定的成員提供自訂屬性清單，如這個反映內容所表示。</summary>
+      <returns>表示此反映內容中指定成員之自訂屬性的集合。</returns>
+      <param name="member">會傳回其自訂屬性的成員。</param>
+      <param name="declaredAttributes">成員在其目前內容中的屬性集合。</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.GetCustomAttributes(System.Reflection.ParameterInfo,System.Collections.Generic.IEnumerable{System.Object})">
+      <summary>在衍生類別中覆寫時，為指定的參數提供自訂屬性的清單，如這個反映內容所表示。</summary>
+      <returns>表示此反映內容中指定參數之自訂屬性的集合。</returns>
+      <param name="parameter">會傳回其自訂屬性的參數。</param>
+      <param name="declaredAttributes">參數在其目前內容中的屬性集合。</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.MapAssembly(System.Reflection.Assembly)"></member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.MapType(System.Reflection.TypeInfo)"></member>
+  </members>
+</doc>

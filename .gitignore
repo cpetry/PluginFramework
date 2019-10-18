@@ -1,0 +1,9 @@
+/Contracts/bin
+/Contracts/obj
+/PluginExample/obj
+/PluginExample/bin
+/PluginExample/.vs
+/PluginHost/obj
+/PluginHost/bin
+/PluginHost/.vs
+/.vs

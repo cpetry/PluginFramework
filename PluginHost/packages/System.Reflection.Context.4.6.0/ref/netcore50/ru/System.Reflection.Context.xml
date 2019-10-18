@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Reflection.Context</name>
+  </assembly>
+  <members>
+    <member name="T:System.Reflection.Context.CustomReflectionContext">
+      <summary>Представляет настраиваемый контекст отражения.</summary>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.#ctor">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.Reflection.Context.CustomReflectionContext" />.</summary>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.#ctor(System.Reflection.ReflectionContext)">
+      <summary>Инициализирует новый экземпляр класса <see cref="T:System.Reflection.Context.CustomReflectionContext" /> с указанным контекстом отражения в качестве базы.</summary>
+      <param name="source">Контекст отражения для использования в качестве базового.</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.AddProperties(System.Type)">
+      <summary>При переопределении в производном классе предоставляет коллекцию дополнительных свойств для заданного типа, представленного в данном контексте отражения.</summary>
+      <returns>Коллекция дополнительных свойств для заданного типа.</returns>
+      <param name="type">Тип, в который добавляются свойства.</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.CreateProperty(System.Type,System.String,System.Func{System.Object,System.Object},System.Action{System.Object,System.Object})">
+      <summary>Создает объект, который представляет свойство, добавляемое к типу, для использования вместе с методом <see cref="M:System.Reflection.Context.CustomReflectionContext.AddProperties(System.Type)" />.</summary>
+      <returns>Объект, представляющий свойство.</returns>
+      <param name="propertyType">Тип создаваемого свойства.</param>
+      <param name="name">Имя создаваемого свойства.</param>
+      <param name="getter">Объект, представляющий метод доступа get свойства.</param>
+      <param name="setter">Объект, представляющий метод доступа set свойства.</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.CreateProperty(System.Type,System.String,System.Func{System.Object,System.Object},System.Action{System.Object,System.Object},System.Collections.Generic.IEnumerable{System.Attribute},System.Collections.Generic.IEnumerable{System.Attribute},System.Collections.Generic.IEnumerable{System.Attribute})">
+      <summary>Создает объект, который представляет свойство, добавляемое к типу, для использования вместе с методом <see cref="M:System.Reflection.Context.CustomReflectionContext.AddProperties(System.Type)" /> и с использованием указанных настраиваемых атрибутов.</summary>
+      <returns>Объект, представляющий свойство.</returns>
+      <param name="propertyType">Тип создаваемого свойства.</param>
+      <param name="name">Имя создаваемого свойства.</param>
+      <param name="getter">Объект, представляющий метод доступа get свойства.</param>
+      <param name="setter">Объект, представляющий метод доступа set свойства.</param>
+      <param name="propertyCustomAttributes">Коллекция настраиваемых атрибутов для применения к свойству.</param>
+      <param name="getterCustomAttributes">Коллекция настраиваемых атрибутов для применения к методу доступа get свойства.</param>
+      <param name="setterCustomAttributes">Коллекция настраиваемых атрибутов для применения к методу доступа set свойства.</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.GetCustomAttributes(System.Reflection.MemberInfo,System.Collections.Generic.IEnumerable{System.Object})">
+      <summary>При переопределении в производном классе предоставляет список настраиваемых атрибутов для заданного члена, представленного в данном контексте отражения.</summary>
+      <returns>Коллекция, представляющая настраиваемые атрибуты заданного члена в данном контексте отражения.</returns>
+      <param name="member">Член, настраиваемые атрибуты которого будут возвращены.</param>
+      <param name="declaredAttributes">Коллекция атрибутов члена в текущем контексте.</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.GetCustomAttributes(System.Reflection.ParameterInfo,System.Collections.Generic.IEnumerable{System.Object})">
+      <summary>При переопределении в производном классе предоставляет список настраиваемых атрибутов для заданного параметра, представленного в данном контексте отражения.</summary>
+      <returns>Коллекция, представляющая настраиваемые атрибуты заданного параметра в данном контексте отражения.</returns>
+      <param name="parameter">Параметр, настраиваемые атрибуты которого будут возвращены.</param>
+      <param name="declaredAttributes">Коллекция атрибутов параметра в текущем контексте.</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.MapAssembly(System.Reflection.Assembly)"></member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.MapType(System.Reflection.TypeInfo)"></member>
+  </members>
+</doc>

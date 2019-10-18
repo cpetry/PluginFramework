@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Reflection.Context</name>
+  </assembly>
+  <members>
+    <member name="T:System.Reflection.Context.CustomReflectionContext">
+      <summary>カスタマイズ可能なリフレクション コンテキストを表します。</summary>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.#ctor">
+      <summary>
+        <see cref="T:System.Reflection.Context.CustomReflectionContext" /> クラスの新しいインスタンスを初期化します。</summary>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.#ctor(System.Reflection.ReflectionContext)">
+      <summary>指定したリフレクション コンテキストを使用して、<see cref="T:System.Reflection.Context.CustomReflectionContext" /> クラスの新しいインスタンスをベースとして初期化します。</summary>
+      <param name="source">ベースとして使用するリフレクション コンテキスト。</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.AddProperties(System.Type)">
+      <summary>派生クラスでオーバーライドされると、このリフレクション コンテキストで表されるように、指定された型の追加のプロパティのコレクションを提供します。</summary>
+      <returns>指定した型の追加プロパティのコレクション。</returns>
+      <param name="type">プロパティを追加した後の型。</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.CreateProperty(System.Type,System.String,System.Func{System.Object,System.Object},System.Action{System.Object,System.Object})">
+      <summary>
+        <see cref="M:System.Reflection.Context.CustomReflectionContext.AddProperties(System.Type)" /> メソッドで使用される、型に追加するプロパティを表すオブジェクトを作成します。</summary>
+      <returns>プロパティを表すオブジェクト。</returns>
+      <param name="propertyType">作成するプロパティの型。</param>
+      <param name="name">作成するプロパティの名前。</param>
+      <param name="getter">プロパティの get アクセサーを表すオブジェクト。</param>
+      <param name="setter">プロパティの set アクセサーを表すオブジェクト。</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.CreateProperty(System.Type,System.String,System.Func{System.Object,System.Object},System.Action{System.Object,System.Object},System.Collections.Generic.IEnumerable{System.Attribute},System.Collections.Generic.IEnumerable{System.Attribute},System.Collections.Generic.IEnumerable{System.Attribute})">
+      <summary>指定したカスタム属性を使用して、<see cref="M:System.Reflection.Context.CustomReflectionContext.AddProperties(System.Type)" /> メソッドで使用される、型に追加するプロパティを表すオブジェクトを作成します。</summary>
+      <returns>プロパティを表すオブジェクト。</returns>
+      <param name="propertyType">作成するプロパティの型。</param>
+      <param name="name">作成するプロパティの名前。</param>
+      <param name="getter">プロパティの get アクセサーを表すオブジェクト。</param>
+      <param name="setter">プロパティの set アクセサーを表すオブジェクト。</param>
+      <param name="propertyCustomAttributes">プロパティに適用するカスタム属性のコレクション。</param>
+      <param name="getterCustomAttributes">プロパティの get アクセサーに適用するカスタム属性のコレクション。</param>
+      <param name="setterCustomAttributes">プロパティの set アクセサーに適用するカスタム属性のコレクション。</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.GetCustomAttributes(System.Reflection.MemberInfo,System.Collections.Generic.IEnumerable{System.Object})">
+      <summary>派生クラスでオーバーライドされると、このリフレクション コンテキストで表されるように、指定されたメンバーのカスタム属性の一覧を提供します。</summary>
+      <returns>このリフレクション コンテキストの指定されたメンバーのカスタム属性を表すコレクション。</returns>
+      <param name="member">カスタム属性を返す対象のメンバー。</param>
+      <param name="declaredAttributes">現在のコンテキストにあるメンバーの属性のコレクション。</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.GetCustomAttributes(System.Reflection.ParameterInfo,System.Collections.Generic.IEnumerable{System.Object})">
+      <summary>派生クラスでオーバーライドされると、このリフレクション コンテキストで表されるように、指定されたパラメーターのカスタム属性の一覧を提供します。</summary>
+      <returns>このリフレクション コンテキストの指定されたパラメーターのカスタム属性を表すコレクション。</returns>
+      <param name="parameter">カスタム属性が返されるパラメーター。</param>
+      <param name="declaredAttributes">現在のコンテキストにあるパラメーターの属性のコレクション。</param>
+    </member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.MapAssembly(System.Reflection.Assembly)"></member>
+    <member name="M:System.Reflection.Context.CustomReflectionContext.MapType(System.Reflection.TypeInfo)"></member>
+  </members>
+</doc>
